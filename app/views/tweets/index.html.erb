@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tweet Client</h1>
+
+<% if current_user %> 
+  <%= link_to "Logout of Twitter", "/logout" %>
+  <%= link_to 'New Tweet', new_tweet_path %>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Tweetbody</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @tweets.each do |tweet| %>
+        <tr>
+          <td><%= tweet.username %></td>
+          <td><%= tweet.tweetbody %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+<% else %>
+  <%= link_to "Login to Twitter", "/auth/twitter" %>
+<% end%>

@@ -1,0 +1,21 @@
+== README
+
+Before you run this app, you may want to do <tt>bundle install</tt> to get all the necessary gems.
+
+To run this app type <tt>rail s</tt> in the terminal. 
+
+This will run a daemon script in the background to retrieve tweets as it comes in from Twitter and be sent to the database. Although I was able to get tweets to come in live from Twitter to the database, I was not able to figure out how to show the tweets in the page as it comes in. Refreshing the page will show the new tweets. I tried setting a timer to reload the page every few seconds to show the new tweets, however this caused an error in other portions of the app. I also tried researching on reloading only a certain element in the html page, but was not successful.
+
+After that go to localhost:3000. You will have a link to sign in at this point. When you click the link to sign in, it will redirect you to authenticate with Twitter. After you have logged in successfully with Twitter, it will redirect you back to the original page.
+
+There you will be able to see the 20 most recent tweets from the user's timeline, a logout option, and a new tweet option.
+
+The logout option will simply delete everything from the database and log out.
+
+The new tweet option will send you to a new page to type your tweet and then post it to twitter. Posting a tweet with more than 140 characters will cause an error.
+
+To stop the app press CTRL-C in the terminal.
+
+The only portion of the app I was unable to complete was showing the tweets live as it comes in. I do want to note, that this is my first time using ruby, rails, and the twitter api.
+
+If you have any other questions, please email me at yulonglin91@gmail.com.
