@@ -39,3 +39,5 @@ daemon.userstream do |status|
   puts status.text
   Tweet.create(:username => status.user.screen_name, :tweetbody => status.text)
 end
+
+hellos
